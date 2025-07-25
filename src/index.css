@@ -147,4 +147,11 @@ All colors MUST be HSL.
     50% { transform: scale(1.05); }
     100% { transform: scale(1); opacity: 1; }
   }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }

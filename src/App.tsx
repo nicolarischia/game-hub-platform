@@ -7,6 +7,10 @@ import Index from "./pages/Index";
 import CounterGame from "./pages/CounterGame";
 import WhatIfGame from "./pages/WhatIfGame";
 import TimelineGame from "./pages/TimelineGame";
+import MemoryGame from "./pages/MemoryGame";
+import GuessNumberGame from "./pages/GuessNumberGame";
+import ColorMatchGame from "./pages/ColorMatchGame";
+import ReactionTimeGame from "./pages/ReactionTimeGame";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +24,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/counter" element={<CounterGame />} />
+          <Route path="/memory" element={<MemoryGame />} />
+          <Route path="/guess-number" element={<GuessNumberGame />} />
+          <Route path="/color-match" element={<ColorMatchGame />} />
+          <Route path="/reaction-time" element={<ReactionTimeGame />} />
           <Route path="/whatif" element={<WhatIfGame />} />
           <Route path="/timeline" element={<TimelineGame />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
