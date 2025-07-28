@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { Calculator, HelpCircle, Clock, Brain, Target, Palette, Zap, Users, Star, TrendingUp, Lock, Wand2, Gavel } from "lucide-react";
+import { Calculator, HelpCircle, Clock, Brain, Target, Palette, Zap, Users, Star, TrendingUp, Lock, Wand2, Gavel, MapPin, Rocket } from "lucide-react";
 
 const games = [
   {
@@ -103,6 +103,26 @@ const games = [
     difficulty: "Medio",
     players: "1",
     time: "10-15 min"
+  },
+  {
+    id: "geo-guesser",
+    title: "GeoGuesser",
+    description: "Indovina dove è stata scattata la foto! Esplora il mondo e testa le tue conoscenze geografiche.",
+    icon: MapPin,
+    path: "/geo-guesser",
+    difficulty: "Medio",
+    players: "1",
+    time: "10-20 min"
+  },
+  {
+    id: "asteroid-launcher",
+    title: "Asteroid Launcher",
+    description: "Progetta un asteroide e scopri i danni che causerebbe impattando sulla Terra!",
+    icon: Rocket,
+    path: "/asteroid-launcher",
+    difficulty: "Facile",
+    players: "1",
+    time: "5-15 min"
   }
 ];
 

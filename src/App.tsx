@@ -14,6 +14,8 @@ import ReactionTimeGame from "./pages/ReactionTimeGame";
 import PasswordGame from "./pages/PasswordGame";
 import InfiniteCraft from "./pages/InfiniteCraft";
 import AuctionGame from "./pages/AuctionGame";
+import GeoGuesser from "./pages/GeoGuesser";
+import AsteroidLauncher from "./pages/AsteroidLauncher";
 import PlayerStats from "./pages/PlayerStats";
 import NotFound from "./pages/NotFound";
 
@@ -35,6 +37,8 @@ const App = () => (
           <Route path="/password-game" element={<PasswordGame />} />
           <Route path="/infinite-craft" element={<InfiniteCraft />} />
           <Route path="/auction-game" element={<AuctionGame />} />
+          <Route path="/geo-guesser" element={<GeoGuesser />} />
+          <Route path="/asteroid-launcher" element={<AsteroidLauncher />} />
           <Route path="/stats" element={<PlayerStats />} />
           <Route path="/whatif" element={<WhatIfGame />} />
           <Route path="/timeline" element={<TimelineGame />} />
