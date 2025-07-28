@@ -4,8 +4,9 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { Clock, TrendingUp, TrendingDown, DollarSign } from 'lucide-react';
+import { Clock, TrendingUp, TrendingDown, DollarSign, ArrowLeft } from 'lucide-react';
 import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 interface Item {
   id: string;
@@ -25,6 +26,7 @@ interface Bid {
 }
 
 const AuctionGame = () => {
+  const navigate = useNavigate();
   const [money, setMoney] = useState(10000);
   const [currentItem, setCurrentItem] = useState<Item | null>(null);
   const [bidAmount, setBidAmount] = useState('');
@@ -299,6 +301,17 @@ const AuctionGame = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-background/80 p-4">
       <div className="max-w-4xl mx-auto">
+        <div className="mb-6">
+          <Button
+            variant="ghost"
+            onClick={() => navigate('/')}
+            className="mb-4"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Torna alla Home
+          </Button>
+        </div>
+        
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
             The Auction Game

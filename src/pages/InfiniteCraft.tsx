@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Plus, Trash2, RotateCcw } from 'lucide-react';
+import { Plus, Trash2, RotateCcw, ArrowLeft } from 'lucide-react';
 import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 interface Element {
   id: string;
@@ -18,6 +19,7 @@ interface Recipe {
 }
 
 const InfiniteCraft = () => {
+  const navigate = useNavigate();
   const [elements, setElements] = useState<Element[]>([]);
   const [discoveredElements, setDiscoveredElements] = useState<Element[]>([]);
   const [selectedElements, setSelectedElements] = useState<Element[]>([]);
@@ -213,6 +215,17 @@ const InfiniteCraft = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-background/80 p-4">
       <div className="max-w-6xl mx-auto">
+        <div className="mb-6">
+          <Button
+            variant="ghost"
+            onClick={() => navigate('/')}
+            className="mb-4"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Torna alla Home
+          </Button>
+        </div>
+        
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
             Infinite Craft
