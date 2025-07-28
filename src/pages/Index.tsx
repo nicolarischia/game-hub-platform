@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { Calculator, HelpCircle, Clock, Brain, Target, Palette, Zap, Users, Star, TrendingUp } from "lucide-react";
+import { Calculator, HelpCircle, Clock, Brain, Target, Palette, Zap, Users, Star, TrendingUp, Lock, Wand2, Gavel } from "lucide-react";
 
 const games = [
   {
@@ -73,6 +73,36 @@ const games = [
     difficulty: "Difficile",
     players: "1",
     time: "5-10 min"
+  },
+  {
+    id: "password-game",
+    title: "Password Game",
+    description: "Crea una password che soddisfi regole sempre più complesse e assurde!",
+    icon: Lock,
+    path: "/password-game",
+    difficulty: "Difficile",
+    players: "1",
+    time: "10-20 min"
+  },
+  {
+    id: "infinite-craft",
+    title: "Infinite Craft",
+    description: "Combina elementi per scoprirne di nuovi in questo gioco di crafting infinito!",
+    icon: Wand2,
+    path: "/infinite-craft",
+    difficulty: "Medio",
+    players: "1",
+    time: "15-30 min"
+  },
+  {
+    id: "auction-game",
+    title: "The Auction Game",
+    description: "Partecipa ad aste virtuali, fai offerte strategiche e accumula profitti!",
+    icon: Gavel,
+    path: "/auction-game",
+    difficulty: "Medio",
+    players: "1",
+    time: "10-15 min"
   }
 ];
 
