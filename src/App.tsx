@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
 import CounterGame from "./pages/CounterGame";
 import WhatIfGame from "./pages/WhatIfGame";
@@ -17,36 +18,40 @@ import AuctionGame from "./pages/AuctionGame";
 import GeoGuesser from "./pages/GeoGuesser";
 import AsteroidLauncher from "./pages/AsteroidLauncher";
 import PlayerStats from "./pages/PlayerStats";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/counter" element={<CounterGame />} />
-          <Route path="/memory" element={<MemoryGame />} />
-          <Route path="/guess-number" element={<GuessNumberGame />} />
-          <Route path="/color-match" element={<ColorMatchGame />} />
-          <Route path="/reaction-time" element={<ReactionTimeGame />} />
-          <Route path="/password-game" element={<PasswordGame />} />
-          <Route path="/infinite-craft" element={<InfiniteCraft />} />
-          <Route path="/auction-game" element={<AuctionGame />} />
-          <Route path="/geo-guesser" element={<GeoGuesser />} />
-          <Route path="/asteroid-launcher" element={<AsteroidLauncher />} />
-          <Route path="/stats" element={<PlayerStats />} />
-          <Route path="/whatif" element={<WhatIfGame />} />
-          <Route path="/timeline" element={<TimelineGame />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <AuthProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/counter" element={<CounterGame />} />
+            <Route path="/memory" element={<MemoryGame />} />
+            <Route path="/guess-number" element={<GuessNumberGame />} />
+            <Route path="/color-match" element={<ColorMatchGame />} />
+            <Route path="/reaction-time" element={<ReactionTimeGame />} />
+            <Route path="/password-game" element={<PasswordGame />} />
+            <Route path="/infinite-craft" element={<InfiniteCraft />} />
+            <Route path="/auction-game" element={<AuctionGame />} />
+            <Route path="/geo-guesser" element={<GeoGuesser />} />
+            <Route path="/asteroid-launcher" element={<AsteroidLauncher />} />
+            <Route path="/stats" element={<PlayerStats />} />
+            <Route path="/whatif" element={<WhatIfGame />} />
+            <Route path="/timeline" element={<TimelineGame />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </AuthProvider>
   </QueryClientProvider>
 );
 

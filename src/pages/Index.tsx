@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { Calculator, HelpCircle, Clock, Brain, Target, Palette, Zap, Users, Star, TrendingUp, Lock, Wand2, Gavel, MapPin, Rocket } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { Calculator, HelpCircle, Clock, Brain, Target, Palette, Zap, Users, Star, TrendingUp, Lock, Wand2, Gavel, MapPin, Rocket, LogIn, LogOut, BarChart3 } from "lucide-react";
 
 const games = [
   {
@@ -143,11 +144,55 @@ const getDifficultyColor = (difficulty: string) => {
 
 const Index = () => {
   const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <h2 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            GameHub
+          </h2>
+          <div className="flex items-center gap-4">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => navigate('/stats')}
+            >
+              <BarChart3 className="w-4 h-4 mr-2" />
+              Statistiche
+            </Button>
+            {user ? (
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground">
+                  Ciao, {user.email?.split('@')[0]}!
+                </span>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={signOut}
+                >
+                  <LogOut className="w-4 h-4 mr-2" />
+                  Logout
+                </Button>
+              </div>
+            ) : (
+              <Button
+                variant="default"
+                size="sm"
+                onClick={() => navigate('/auth')}
+              >
+                <LogIn className="w-4 h-4 mr-2" />
+                Accedi
+              </Button>
+            )}
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <header className="relative w-full py-16 px-6 overflow-hidden">
+      <header className="relative w-full py-16 px-6 overflow-hidden mt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5"></div>
         <div className="relative max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
