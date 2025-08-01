@@ -136,7 +136,7 @@ All colors MUST be HSL.
   }
 
   .game-button {
-    @apply bg-gradient-to-r from-primary via-primary/90 to-accent hover:from-primary/95 hover:via-accent hover:to-primary text-primary-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-400 hover:shadow-2xl hover:shadow-primary/25 hover:scale-[1.05] transform relative overflow-hidden;
+    @apply bg-gradient-to-r from-primary via-primary/90 to-accent hover:from-primary/95 hover:via-accent hover:to-primary text-primary-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/25 hover:scale-[1.05] transform relative overflow-hidden;
   }
   
   .game-button::before {
