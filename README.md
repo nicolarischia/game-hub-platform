@@ -3,7 +3,7 @@
 ## 📌 Informazioni Generali
 
 **Titolo progetto:** GAME HUB PLATFORM  
-**URL progetto:** [https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296](https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296)
+**URL progetto:** [https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296](https://gamehubplatform.lovable.app/)
 
 **GAME HUB PLATFORM** è una piattaforma web pensata per aggregare, sviluppare e distribuire giochi in modo collaborativo ed efficiente. Questo documento descrive le tecnologie utilizzate, le modalità di modifica del codice e le opzioni di deploy.
 
@@ -27,7 +27,7 @@ Il progetto si basa su uno stack tecnologico moderno e altamente performante:
 
 ### 1. ✨ Tramite la piattaforma **Lovable**
 
-Accedi direttamente al progetto su [Lovable](https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296) e utilizza la funzionalità di prompting per generare e modificare il codice.
+Accedi direttamente al progetto su [Lovable](https://gamehubplatform.lovable.app/) e utilizza la funzionalità di prompting per generare e modificare il codice.
 
 ✅ Le modifiche apportate saranno automaticamente salvate e committate nel repository.
 
