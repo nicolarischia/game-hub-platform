@@ -18,6 +18,7 @@ Il progetto si basa su uno stack tecnologico moderno e altamente performante:
 - ⚛️ **React** – Libreria per la creazione di interfacce utente.
 - 🧩 **shadcn/ui** – Collezione di componenti UI accessibili e stilizzati.
 - 🎨 **Tailwind CSS** – Framework utility-first per la creazione di interfacce moderne.
+- 🧪 **Supabase** – Backend-as-a-Service open source per gestione database PostgreSQL, autenticazione, API in tempo reale e storage.
 
 ---
 
