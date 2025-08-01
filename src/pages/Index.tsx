@@ -149,11 +149,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation Bar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-border/30">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <h2 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            GameHub
-          </h2>
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary via-accent to-primary rounded-xl flex items-center justify-center glow-effect">
+              <Calculator className="h-6 w-6 text-white" />
+            </div>
+            <h2 className="text-2xl font-black bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              GameHub
+            </h2>
+          </div>
           <div className="flex items-center gap-4">
             <Button
               variant="ghost"
@@ -192,38 +197,39 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative w-full py-16 px-6 overflow-hidden mt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5"></div>
-        <div className="relative max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-            <Star className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Piattaforma di Giochi #1</span>
+      <header className="relative w-full py-24 px-6 overflow-hidden mt-16 hero-section">
+        <div className="relative max-w-6xl mx-auto text-center z-10">
+          <div className="inline-flex items-center gap-3 px-6 py-3 glass-effect rounded-full mb-8 floating-animation">
+            <Star className="w-5 h-5 text-primary" />
+            <span className="text-lg font-semibold text-primary">Piattaforma di Giochi #1</span>
           </div>
           
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-            GameHub
-          </h1>
+          <div className="floating-animation">
+            <h1 className="text-7xl md:text-8xl font-black mb-8 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
+              GameHub
+            </h1>
+          </div>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
+          <p className="text-2xl md:text-3xl text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed">
             La collezione definitiva di mini-giochi interattivi. Sfida te stesso, migliora le tue abilità e divertiti!
           </p>
           
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <div className="text-center">
-              <p className="text-3xl font-bold text-primary">{stats.totalGames}</p>
-              <p className="text-sm text-muted-foreground">Giochi Disponibili</p>
+          <div className="flex flex-wrap justify-center gap-12 mb-16">
+            <div className="text-center glass-effect rounded-2xl p-6 hover:scale-105 transition-all duration-300">
+              <p className="text-5xl font-black text-primary mb-2">{stats.totalGames}</p>
+              <p className="text-lg text-muted-foreground">Giochi Disponibili</p>
             </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-accent">{stats.totalPlayers}</p>
-              <p className="text-sm text-muted-foreground">Giocatori Attivi</p>
+            <div className="text-center glass-effect rounded-2xl p-6 hover:scale-105 transition-all duration-300">
+              <p className="text-5xl font-black text-accent mb-2">{stats.totalPlayers}</p>
+              <p className="text-lg text-muted-foreground">Giocatori Attivi</p>
             </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-secondary flex items-center justify-center gap-1">
-                <Star className="w-6 h-6 fill-current" />
+            <div className="text-center glass-effect rounded-2xl p-6 hover:scale-105 transition-all duration-300">
+              <p className="text-5xl font-black text-primary flex items-center justify-center gap-2 mb-2">
+                <Star className="w-8 h-8 fill-current" />
                 {stats.avgRating}
               </p>
-              <p className="text-sm text-muted-foreground">Valutazione Media</p>
+              <p className="text-lg text-muted-foreground">Valutazione Media</p>
             </div>
           </div>
         </div>
@@ -231,9 +237,9 @@ const Index = () => {
 
       {/* Games Section */}
       <main className="max-w-7xl mx-auto px-6 pb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Esplora i Nostri Giochi</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-6xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">Esplora i Nostri Giochi</h2>
+          <p className="text-2xl text-muted-foreground max-w-3xl mx-auto">
             Dalla velocità di reazione ai puzzle cerebrali, trova il gioco perfetto per te
           </p>
         </div>
@@ -242,27 +248,27 @@ const Index = () => {
           {games.map((game, index) => (
             <Card 
               key={game.id} 
-              className="group game-card hover:shadow-xl transition-all duration-300 cursor-pointer border-0"
+              className="group game-card hover:shadow-2xl transition-all duration-500 cursor-pointer border-0 hover:scale-[1.03]"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => navigate(game.path)}
             >
-              <div className="p-6 space-y-4">
+              <div className="p-8 space-y-6">
                 {/* Header */}
                 <div className="flex items-start justify-between">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <game.icon className="w-7 h-7 text-white" />
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary via-accent to-primary flex items-center justify-center group-hover:scale-110 transition-transform glow-effect">
+                    <game.icon className="w-8 h-8 text-white" />
                   </div>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(game.difficulty)}`}>
+                  <span className={`px-3 py-2 rounded-full text-sm font-semibold ${getDifficultyColor(game.difficulty)}`}>
                     {game.difficulty}
                   </span>
                 </div>
 
                 {/* Content */}
-                <div className="space-y-3">
-                  <h3 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-black text-card-foreground group-hover:text-primary transition-colors">
                     {game.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                  <p className="text-lg text-muted-foreground leading-relaxed line-clamp-3">
                     {game.description}
                   </p>
                 </div>
@@ -281,8 +287,8 @@ const Index = () => {
 
                 {/* Play Button */}
                 <Button 
-                  className="w-full game-button group-hover:scale-105 transition-transform"
-                  size="sm"
+                  className="w-full game-button group-hover:scale-105 transition-transform text-lg py-4"
+                  size="lg"
                 >
                   Gioca Ora
                 </Button>

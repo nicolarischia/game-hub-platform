@@ -302,11 +302,12 @@ const GeoGuesser = () => {
             </CardHeader>
             <CardContent>
               <div 
-                className="relative w-full h-64 bg-gradient-to-b from-blue-200 to-green-200 rounded-lg cursor-crosshair border-2 border-dashed border-muted-foreground/50 hover:border-primary transition-colors"
+                className="relative w-full h-80 bg-gradient-to-b from-sky-100 to-ocean-blue rounded-lg cursor-crosshair border-2 border-dashed border-muted-foreground/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg overflow-hidden"
                 onClick={handleMapClick}
                 style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23e0f2fe'/%3E%3Cpath d='M50 120 Q100 100 150 120 T250 120 Q300 100 350 120 V200 H50 Z' fill='%23c8e6c9'/%3E%3Cpath d='M0 130 Q50 110 100 130 T200 130 Q250 110 300 130 T400 130 V200 H0 Z' fill='%23a5d6a7'/%3E%3C/svg%3E")`,
-                  backgroundSize: 'cover'
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%2387CEEB'/%3E%3Cg fill='%2334D399'%3E%3Cpath d='M150 200c0-20 30-40 80-35 45 5 60 25 90 20 35-5 70-15 120-10 40 4 80 15 110 25v200H150z'/%3E%3Cpath d='M50 250c40-15 80-20 120-15 50 6 90 20 140 18 45-2 85-12 130-8 30 3 60 10 90 15v140H50z'/%3E%3Cpath d='M600 180c30-8 50-5 80 0 25 4 45 12 70 15v205H600z'/%3E%3Cpath d='M0 300c25-5 50-8 75-5 20 2 40 8 60 12v93H0z'/%3E%3Cpath d='M300 50c40 5 70 15 100 25 25 8 50 18 75 28v50c-30-10-60-20-90-25-35-6-65-12-85-18z'/%3E%3Cpath d='M500 80c25 8 45 18 70 28 20 8 40 18 60 25v30c-25-8-50-16-70-22-22-7-40-14-60-21z'/%3E%3C/g%3E%3C/svg%3E")`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
                 }}
               >
                 <div className="absolute inset-0 flex items-center justify-center">
