@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+# 🎮 Relazione Tecnica – Progetto GAME HUB PLATFORM
 
-## Project info
+## 📌 Informazioni Generali
 
-**URL**: https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296
+**Titolo progetto:** GAME HUB PLATFORM  
+**URL progetto:** [https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296](https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296)
 
-## How can I edit this code?
+**GAME HUB PLATFORM** è una piattaforma web pensata per aggregare, sviluppare e distribuire giochi in modo collaborativo ed efficiente. Questo documento descrive le tecnologie utilizzate, le modalità di modifica del codice e le opzioni di deploy.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠️ Tecnologie Utilizzate
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296) and start prompting.
+Il progetto si basa su uno stack tecnologico moderno e altamente performante:
 
-Changes made via Lovable will be committed automatically to this repo.
+- ⚡ **Vite** – Bundler veloce per progetti frontend.
+- 🟦 **TypeScript** – Superset di JavaScript per tipizzazione statica.
+- ⚛️ **React** – Libreria per la creazione di interfacce utente.
+- 🧩 **shadcn/ui** – Collezione di componenti UI accessibili e stilizzati.
+- 🎨 **Tailwind CSS** – Framework utility-first per la creazione di interfacce moderne.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🧑‍💻 Modalità di Modifica del Codice
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+È possibile modificare il codice sorgente della piattaforma in diversi modi:
 
-Follow these steps:
+### 1. ✨ Tramite la piattaforma **Lovable**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+Accedi direttamente al progetto su [Lovable](https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296) e utilizza la funzionalità di prompting per generare e modificare il codice.
+
+✅ Le modifiche apportate saranno automaticamente salvate e committate nel repository.
+
+---
+
+### 2. 🧑‍💻 Utilizzo di un **IDE locale**
+
+Per lavorare in locale, è necessario avere installati **Node.js** e **npm**. È consigliato l’uso di **nvm** per la gestione delle versioni ([guida](https://github.com/nvm-sh/nvm#installing-and-updating)).
+
+#### 🔧 Istruzioni:
+
+```bash
+# Clona il repository Git del progetto
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Accedi alla directory del progetto
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# Installa le dipendenze
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Avvia il server di sviluppo con hot reload
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/fbc272a6-e7c0-4466-8d8e-51742c3d2296) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
